@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+    <title>Edit Trainee</title>
+    <h:outputStylesheet library="css" name="bootstrap.min.css" />
+</h:head>
+<h:body>
+<h:form id="EditTraineeForm" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <h2 style="text-align: center" class="col-sm-4">Edit Trainee Record</h2>
+            </div>
+            <hr/>
+            <div class="form-group">
+                <h:outputLabel for="id" class="control-label col-sm-2">ID:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="id" value="#{editRecordObj.id}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="username" class="control-label col-sm-2">User Name:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputText id="username" value="#{editRecordObj.username}" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <h:outputLabel for="password" class="control-label col-sm-2">Password:</h:outputLabel>
+                <div class="col-sm-4">
+                    <h:inputSecret id="password" value="#{editRecordObj.pass}" class="form-control" redisplay="true"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <h:commandButton value="Update" action="#{traineeBean.updateTrainee(editRecordObj)}" class="btn btn-primary updateBtnStyle" />
+                </div>
+            </div>
+        </h:form>
+        
+</h:body>
+</html>
